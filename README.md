@@ -1,6 +1,6 @@
 # 🏡 Sistema de Controle de Imóveis
 
-Um sistema simples e eficiente para gerenciamento de imóveis desenvolvido especialmente para corretores independentes. Com ele, é possível cadastrar, editar, visualizar e gerenciar imóveis disponíveis para venda ou locação.
+Um sistema simples e eficiente para gerenciamento de imóveis desenvolvido especialmente para corretores independentes. Com ele, é possível cadastrar, editar, visualizar e gerenciar imóveis disponíveis para venda.
 
 ## 🚀 Funcionalidades
 
