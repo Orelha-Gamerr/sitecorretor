@@ -42,6 +42,7 @@ session_start();
             <li><a href="catalogo.html">Encontre seu imóvel</a></li>
             <li><a href="contato.html">Contato</a></li>
             <li><a href="login.php">Login</a></li>
+            <li><a href="./admin/index.php">Admin</a></li>
         </ul>
         </nav>
     </header>

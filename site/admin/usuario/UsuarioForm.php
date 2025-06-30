@@ -1,7 +1,7 @@
 <?php
-include "../db.class.php";
+include ".../db.class.php";
 
-include_once "../header.php";
+include_once ".../header.php";
 
 $db = new db('usuario');
 $data = null;

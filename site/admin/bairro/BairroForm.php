@@ -1,14 +1,39 @@
 <?php
-    include "../db.class.php";
-    include_once "../header.php";
+    include ".../db.class.php";
+    include_once ".../header.php";
 
-    $db = new db('exercicios');
-    $dbCategoria = new db('categoria');
-    $categorias = $dbCategoria->all();
+    $db = new db('bairro');
     $data = null;
     $errors = [];
     $success = '';
 
+    if(!empty($_POST)){
+        $data = (object) $_POST;
+
+        if(empty(trim($_POST['nome']))){
+            $errors[] = "<li>O nome é Obrigatório.</li>";
+        }
+
+        if (empty(($errors))){
+            try {
+                $db->store($_POST);
+                $success = "Registro criado com sucesso!";
+                
+                echo "<script>
+                    setTimeout(
+                        ()=> window.location.href = './BairroList.php', 1000
+                    )
+                </script>";
+            } catch(Exception $e){
+                $errors[] = "Erro ao salvar: " . $e->getMessage();
+            }
+        }
+    }
+
+    if(!empty($_GET['id'])){
+        $data = $db->find($_GET['id']);
+    }
+?>
 ?>
 
 <div class="container mt-4">
@@ -33,7 +58,7 @@
 
     <div class="card shadow-sm border-0">
         <div class="card-header bg-info text-white py-3">
-            <h4 class="mb-0">Formulário de Exercícios</h4>
+            <h4 class="mb-0">Formulário de Bairros</h4>
         </div>
         
         <div class="card-body">
@@ -43,44 +68,10 @@
                 <!-- Linha 1 -->
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
-                        <label for="nome" class="form-label fw-bold">Nome do exercício</label>
+                        <label for="nome" class="form-label fw-bold">Nome do Bairro</label>
                         <input type="text" name="nome" class="form-control form-control-lg" 
                                value="<?= $data->nome ?? '' ?>" placeholder="Digite o nome do exercício">
                     </div>
-                    
-                    <div class="col-md-6">
-                        <label for="categoria_id" class="form-label fw-bold">Categoria</label>
-                        <select name="categoria_id" class="form-select form-select-lg">
-                            <?php foreach($categorias as $categoria) { ?>
-                            <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Linha 2 -->
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <label for="equipamento" class="form-label fw-bold">Equipamento</label>
-                        <input type="text" name="equipamento" class="form-control form-control-lg" 
-                               value="<?= $data->equipamento ?? '' ?>" placeholder="Equipamentos necessários">
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <label for="nivel" class="form-label fw-bold">Nível</label>
-                        <select name="nivel" class="form-select form-select-lg">
-                            <option value="1">Iniciante</option>
-                            <option value="2">Intermediário</option>
-                            <option value="3">Avançado</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Descrição -->
-                <div class="mb-4">
-                    <label for="descricao" class="form-label fw-bold">Descrição</label>
-                    <textarea name="descricao" class="form-control" rows="4" 
-                              placeholder="Descreva o exercício"><?= $data->descricao ?? '' ?></textarea>
                 </div>
                 
                 <!-- Botões -->

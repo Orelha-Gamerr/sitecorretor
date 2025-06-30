@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-include "./db.class.php";
+include "./admin/db.class.php";
 
 $db = new db('usuario');
 $data = null;

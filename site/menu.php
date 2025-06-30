@@ -1,28 +1,29 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand">Sistema de Treinos</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../dashboard.php">Início</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../usuario/UsuarioList.php">Usuário</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../exercicios/ExercicioList.php">Exercícios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../treino/TreinoList.php">Treinos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../treino_usuario/TreinoUsuarioList.php">Treino de Usuarios</a>
-        </li>
-      </ul>
-    </div>
-    <a href="../index.php?logout=true" style="float: right;" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
-  </div>
-</nav>
+<header class="top-header">
+        <div class="profile-container">
+        <div class="left-box">
+            <img src="config/imagens/ico/android-chrome-192x192.png" alt="Leandro Lucietto" class="profile-img" />
+            <div class="nome-cargo">
+            <h1>Leandro Lucietto</h1>
+            <p class="corretor">Corretor</p>
+            </div>
+        </div>
+
+        <div class="center-box">
+            <p class="especialista">Especialista em compra e venda de imóveis.</p>
+            <p class="descricao">Alta performance em atender sua necessidade</p>
+        </div>
+
+        <div class="right-box">
+            <p>20 anos de experiência em vendas<br><strong>CRECI 44902F</strong></p>
+        </div>
+        </div>
+
+        <nav class="menu">
+        <ul>
+            <li><a>Página Inicial</a></li>
+            <li><a href="./usuario/catalogo.php">Encontre seu imóvel</a></li>
+            <li><a href="./usuario/contato.php">Contato</a></li>
+            <li><a href="login.php">Login</a></li>
+        </ul>
+        </nav>
+    </header>
