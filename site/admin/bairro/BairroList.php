@@ -1,9 +1,8 @@
 <?php
-    include ".../db.class.php";
+    include "../db.class.php";
+    include_once "../../header.php";
 
-    include_once ".../header.php";
-
-        $db = new db('exercicios');
+        $db = new db('bairro');
 
         if(!empty($_GET['id'])){
             $db->destroy($_GET['id']);
@@ -17,11 +16,12 @@
 
     ?>
 
-
-                <h3>Listagem Exercicios</h3>
+    <div class="container mt-5">
+        <div class="row">
+            <h3>Listagem de Bairros</h3>
                 <!--http://localhost/php/site/admin/PostList.php-->
 
-                <form action="./ExercicioList.php" method="post">
+                <form action="./BairroList.php" method="post">
 
                     <div class="row">
                         <div class="col-md-2">
@@ -89,5 +89,5 @@
                 </table>
             </div>
 <?php
-    include_once "../footer.php";
+    include_once "../../footer.php";
 ?>

@@ -1,7 +1,17 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
   }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
   
   .top-header {
     background-color: #ffffff;

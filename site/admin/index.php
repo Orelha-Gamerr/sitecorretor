@@ -32,9 +32,10 @@ session_start();
 </head>
 
 <body class="bg-light">
+    <main>
     <div class="container py-5">
         <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white py-3">
+            <div class="card-header bg-warning text-white py-3">
                 <h2 class="mb-0"><i class="fas fa-tachometer-alt me-2"></i>Painel de Administração</h2>
             </div>
             
@@ -43,28 +44,41 @@ session_start();
                 
                 <div class="row g-4">
                     
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card dashboard-card h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-users fa-3x text-success mb-3"></i>
+                                <i class="fa-solid fa-building fa-3x text-success mb-3"></i>
                                 <h5 class="card-title">Gerenciar Imóveis</h5>
                                 <p class="card-text">Cadastre e edite imóveis</p>
-                                <a href="./usuario/UsuarioList.php" class="btn btn-success btn-lg w-100">
-                                    <i class="fas fa-user-cog me-2"></i> Acessar
+                                <a href="./imovel/ImovelList.php" class="btn btn-success btn-lg w-100">
+                                    <i class="fa-solid fa-list me-2"></i> Acessar
                                 </a>
                             </div>
                         </div>
                     </div>
                     
                     
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card dashboard-card h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-dumbbell fa-3x text-primary mb-3"></i>
+                                <i class="fa-solid fa-map fa-3x text-primary mb-3"></i>
                                 <h5 class="card-title">Gerenciar Bairros</h5>
                                 <p class="card-text">Cadastre e edite os bairros disponíveis</p>
-                                <a href="./exercicios/ExercicioList.php" class="btn btn-primary btn-lg w-100">
-                                    <i class="fas fa-running me-2"></i> Acessar
+                                <a href="./bairro/BairroList.php" class="btn btn-primary btn-lg w-100">
+                                    <i class="fa-solid fa-list me-2"></i> Acessar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card dashboard-card h-100">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-house fa-3x text-warning mb-3"></i>
+                                <h5 class="card-title">Tela Inicial</h5>
+                                <p class="card-text">Visualizar a estrutura do site</p>
+                                <a href="../index.php" class="btn btn-warning btn-lg w-100">
+                                    <i class="fa-solid fa-arrow-right me-2"></i> Acessar
                                 </a>
                             </div>
                         </div>

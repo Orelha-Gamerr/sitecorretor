@@ -1,8 +1,8 @@
 <?php
-    include ".../db.class.php";
-    include_once ".../header.php"; 
+    include "../db.class.php";
+    include_once "../../header.php";
 
-    $db = new db('treino');
+    $db = new db('imovel');
 
     if (!empty($_GET['id'])) {
         $db->destroy($_GET['id']);
@@ -15,16 +15,16 @@
     }
 ?>
 
-<body>
+
     <div class="container mt-5">
         <div class="row">
-            <h3>Listagem de Treinos</h3>
+            <h3>Listagem de Imóveis</h3>
 
-            <form action="./TreinoList.php" method="post">
+            <form action="./ImovelList.php" method="post">
                 <div class="row">
                     <div class="col-md-2">
                         <select name="tipo" class="form-select">
-                            <option value="nome">Treino</option>
+                            <option value="nome">Nome</option>
                             <option value="descricao">Descrição</option>
                             <option value="usuario_id">Usuário</option>
                         </select>
@@ -86,4 +86,4 @@
         </div>
     </div>
 
-<?php include_once "../footer.php"; ?>
+<?php include_once "../../footer.php"; ?>

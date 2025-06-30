@@ -1,6 +1,6 @@
 <?php
-    include ".../db.class.php";
-    include_once ".../header.php";
+    include "../db.class.php";
+    include_once "../../header.php";
 
     $db = new db('bairro');
     $data = null;
