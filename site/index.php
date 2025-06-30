@@ -6,12 +6,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-    <script src="script.js"></script>
+    <script src="config/cript.js"></script>
         <style type="text/css">
-        @import url("style.css") all;
+        @import url("config/style.css") all;
         </style>
         <title>Leandro Lucietto Corretor</title>
-        <link rel="shortcut icon" href="imagens/ico/android-chrome-192x192.png" type="image/x-icon">
+        <link rel="shortcut icon" href="config/imagens/ico/android-chrome-192x192.png" type="image/x-icon">
 </head>
 <body>
 
@@ -19,7 +19,7 @@ session_start();
     <header class="top-header">
         <div class="profile-container">
         <div class="left-box">
-            <img src="imagens/ico/android-chrome-192x192.png" alt="Leandro Lucietto" class="profile-img" />
+            <img src="config/imagens/ico/android-chrome-192x192.png" alt="Leandro Lucietto" class="profile-img" />
             <div class="nome-cargo">
             <h1>Leandro Lucietto</h1>
             <p class="corretor">Corretor</p>
