@@ -4,12 +4,15 @@ if (!isset($base)) {
 }
 ?>
 
+
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <span><i class="fa-solid fa-globe"></i> Site Leandro Marcos Lucietto</span>
+            <a href="https://github.com/Orelha-Gamerr" class="text-warning text-decoration-none">
+                <i class="fa-brands fa-github"></i> Dev: Angelo Lucietto
+            </a>
         </div>
-    </div>
-</main>
-    <footer class="rodape">
-        <span>Site Leandro Marcos Lucietto</span> 
-        <a href="https://github.com/Orelha-Gamerr" class="rodape">Dev: Angelo Lucietto</a>
     </footer>
 
     <!-- Bootstrap JS -->

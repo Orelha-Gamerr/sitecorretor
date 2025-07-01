@@ -7,16 +7,32 @@ session_start();
 <html lang="pt-br">
     <head>
     <script src="config/cript.js"></script>
-        <style type="text/css">
-        @import url("config/style.css") all;
-        </style>
-        <title>Leandro Lucietto Corretor</title>
-        <link rel="shortcut icon" href="config/imagens/ico/android-chrome-192x192.png" type="image/x-icon">
+    <style type="text/css">
+    @import url("config/style.css") all;
+    </style>
+    <title>Leandro Lucietto Corretor</title>
+    <link rel="shortcut icon" href="config/imagens/ico/android-chrome-192x192.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Font Awesome (CORRETO) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 380px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
 <body class="bg-light">
-    <header class="top-header">
+    <header class="top-header mb-0">
         <div class="profile-container">
         <div class="left-box">
             <img src="config/imagens/ico/android-chrome-192x192.png" alt="Leandro Lucietto" class="profile-img" />
@@ -47,9 +63,24 @@ session_start();
         </nav>
     </header>
 
-    <?php include_once "./footer.php"; ?>
+    <div class="container py-0 corpo-site mt-0" style="margin-top: 120px !important;">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
-</body>
-</html>
+        <div id="map"></div>
+        <script>
+        // Coordenadas do centro do mapa (ex: Chapecó-SC)
+        var map = L.map('map').setView([-27.090, -52.615], 13);
+
+        // Camada de mapa do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 17,
+        }).addTo(map);
+
+        // Adicionando um marcador
+        L.marker([-27.100, -52.615]).addTo(map)
+            .bindPopup('Atendimento em Chapecó e Região!')
+            .openPopup();
+        </script>
+    </div>
+
+        <?php include_once "./footer.php"; ?>
+

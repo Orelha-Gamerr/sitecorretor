@@ -35,7 +35,7 @@ session_start();
     <main>
     <div class="container py-5">
         <div class="card shadow-sm">
-            <div class="card-header bg-warning text-white py-3">
+            <div class="card-header text-white py-3" style="background-color: rgb(233, 151, 0);">
                 <h2 class="mb-0"><i class="fas fa-tachometer-alt me-2"></i>Painel de Administração</h2>
             </div>
             
@@ -92,5 +92,4 @@ session_start();
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
-</body>
 </html>
