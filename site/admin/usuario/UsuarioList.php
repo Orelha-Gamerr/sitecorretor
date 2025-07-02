@@ -1,6 +1,6 @@
 <?php
-    include ".../db.class.php";
-    include_once ".../header.php"; 
+    include "../db.class.php";
+    include_once "../../header.php"; 
 
         $db = new db('usuario');
 
@@ -20,7 +20,7 @@
 
         <div class="container mt-5">
             <div class="row">
-                <h3>Listagem Usuário</h3>
+                <h3><i class="fas fa-user me-1"></i>Listagem Usuário</h3>
                 <!--http://localhost/php/site/admin/UsuarioList.php-->
 
                 <form action="./UsuarioList.php" method="post">
@@ -29,8 +29,6 @@
                         <div class="col-md-2">
                             <select name="tipo" class="form-select">
                                 <option value="nome">Nome</option>
-                                <option value="nome">CPF</option>
-                                <option value="nome">Telefone</option>
                             </select>
                         </div>
 
@@ -53,12 +51,9 @@
                     <tr>
                         <th scope="col">Registro</th>
                         <th scope="col">Nome</th>
-                        <th scope="col">CPF</th>
-                        <th scope="col">Telefone</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Cargo</th>
-                        <th scope="col">Ação</th>
-                        <th scope="col">Ação</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,9 +63,6 @@
                             <tr>
                                 <th scope='row'>$item->id</th>
                                 <td>$item->nome</td>
-                                <td>$item->cpf</td>
-                                <td>$item->telefone</td>
-                                <td>$item->email</td>
                                 <td>$item->cargo</td>
                                 <td>
                                     <a  class='btn btn-warning' title='Editar' href='./UsuarioForm.php?id=$item->id'><i class='fa-solid fa-pen-to-square'></i></a>
@@ -90,8 +82,10 @@
             </div>
 
             
-    <?php
-    
-    include_once "../footer.php";
-    
-    ?>
+   <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>

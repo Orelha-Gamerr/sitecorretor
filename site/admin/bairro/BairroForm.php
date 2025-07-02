@@ -34,7 +34,6 @@
         $data = $db->find($_GET['id']);
     }
 ?>
-?>
 
 <div class="container mt-4">
     <?php if(!empty($success)) {?>
@@ -57,8 +56,8 @@
     <?php } ?>
 
     <div class="card shadow-sm border-0">
-        <div class="card-header bg-info text-white py-3">
-            <h4 class="mb-0">Formulário de Bairros</h4>
+        <div class="card-header bg-white text-black py-3">
+            <h4 class="mb-0"><i class="fas fa-map-marker-alt me-1"></i>Formulário de Bairros</h4>
         </div>
         
         <div class="card-body">
@@ -70,19 +69,19 @@
                     <div class="col-md-6">
                         <label for="nome" class="form-label fw-bold">Nome do Bairro</label>
                         <input type="text" name="nome" class="form-control form-control-lg" 
-                               value="<?= $data->nome ?? '' ?>" placeholder="Digite o nome do exercício">
+                               value="<?= $data->nome ?? '' ?>" placeholder="Digite o nome do bairro">
                     </div>
                 </div>
                 
                 <!-- Botões -->
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="./ExercicioList.php" class="btn btn-outline-secondary btn-lg px-4">
-                        <i class="fas fa-arrow-left me-2"></i>
-                        Voltar
-                    </a>
-                    <button type="submit" class="btn btn-outline-success btn-lg px-4">
-                        <i class="fas <?= !empty($_GET['id']) ? 'fa-sync-alt' : 'fa-save' ?> me-2"></i>
-                        <?= !empty($_GET['id']) ? "Atualizar" : "Salvar" ?>
+                    <div>
+                        <a href="./BairroList.php" class="btn btn-outline-secondary btn-lg px-4 me-2">
+                            <i class="fas fa-arrow-left me-2"></i> Voltar
+                        </a>
+                    </div>
+                    <button type="submit" class="btn btn-outline-warning btn-lg px-4">
+                        <i class="fas fa-save me-2"></i> Salvar
                     </button>
                 </div>
             </form>
@@ -91,5 +90,5 @@
 </div>
 
 <?php
-    include_once "../footer.php";
+    include_once "../../footer.php";
 ?>

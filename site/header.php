@@ -7,20 +7,10 @@ $base = "/sitecorretor/site/";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
-
-  <!-- Estilo principal -->
   <link rel="stylesheet" href="<?= $base ?>config/style.css">
-
-  <!-- Script principal -->
   <script src="<?= $base ?>config/script.js"></script>
-
-  <!-- Favicon -->
   <link rel="shortcut icon" href="<?= $base ?>imagens/ico/android-chrome-192x192.png" type="image/x-icon">
 
   <title>Leandro Lucietto Corretor</title>
@@ -30,7 +20,7 @@ $base = "/sitecorretor/site/";
 <!-- Navbar moderna -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold text-dark" href="#"><i class="fas fa-home me-2"></i>Sistema de Imóveis</a>
+    <a class="navbar-brand fw-bold text-dark"><i></i>Sistema de Imóveis</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

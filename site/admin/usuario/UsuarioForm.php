@@ -1,7 +1,7 @@
 <?php
-include ".../db.class.php";
+include "../db.class.php";
 
-include_once ".../header.php";
+include_once "../../header.php";
 
 $db = new db('usuario');
 $data = null;
@@ -16,18 +16,6 @@ if (!empty($_POST)) {
     
     if (empty(trim($_POST['nome']))) {
         $errors[] = "<li>O nome é obrigatorio</li>";
-    }
-
-    if (empty(trim($_POST['email']))) {
-        $errors[] = "<li>O email é obrigatorio</li>";
-    }
-
-    if (empty(trim($_POST['cpf']))) {
-        $errors[] = "<li>O cpf é obrigatorio</li>";
-    }
-
-    if (empty(trim($_POST['telefone']))) {
-        $errors[] = "<li>O telefone é obrigatorio</li>";
     }
 
     if (empty(trim($_POST['senha']))) {
@@ -96,7 +84,7 @@ if (!empty($_GET['id'])) {
     <?php } ?>
 
     <div class="card shadow-sm">
-        <div class="card-header bg-info text-white py-3">
+        <div class="card-header bg-white text-black py-3">
             <h4 class="mb-0"><i class="fas fa-user-edit me-2"></i>Formulário de Usuário</h4>
         </div>
         
@@ -110,37 +98,16 @@ if (!empty($_GET['id'])) {
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                             <input type="text" name="nome" id="nome" class="form-control form-control-lg" 
-                                   value="<?= $data->nome ?? '' ?>" placeholder="Digite o nome completo do aluno">
+                                   value="<?= $data->nome ?? '' ?>" placeholder="Digite o nome completo do usuário">
                         </div>
                     </div>
                     
                     <div class="col-md-6">
-                        <label for="telefone" class="form-label fw-bold">Telefone</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <input type="text" name="telefone" id="telefone" class="form-control form-control-lg" 
-                                   value="<?= $data->telefone ?? '' ?>" placeholder="(00) 00000-0000">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <label for="email" class="form-label fw-bold">Email</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            <input type="email" name="email" id="email" class="form-control form-control-lg" 
-                                   value="<?= $data->email ?? '' ?>" placeholder="seu@email.com">
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <label for="cpf" class="form-label fw-bold">CPF</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                            <input type="text" name="cpf" id="cpf" class="form-control form-control-lg" 
-                                   value="<?= $data->cpf ?? '' ?>" placeholder="000.000.000-00">
-                        </div>
+                        <label for="cargo" class="form-label fw-bold">Cargo</label>
+                        <select name="cargo" class="form-select form-select-lg">
+                            <option value="administrador">Administrador</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
                     </div>
                 </div>
                 
@@ -163,16 +130,6 @@ if (!empty($_GET['id'])) {
                         </div>
                     </div>
                 </div>
-
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <label for="cargo" class="form-label fw-bold">Cargo</label>
-                        <select name="cargo" class="form-select form-select-lg">
-                            <option value="professor">Professor</option>
-                            <option value="aluno">Aluno</option>
-                        </select>
-                    </div>
-                </div>
                 
                 <div class="d-flex justify-content-between mt-4">
                     <a href="./UsuarioList.php" class="btn btn-outline-secondary btn-lg px-4">
@@ -188,5 +145,5 @@ if (!empty($_GET['id'])) {
 </div>
 
 <?php
-    include_once "../footer.php";
+    include_once "../../footer.php";
 ?>

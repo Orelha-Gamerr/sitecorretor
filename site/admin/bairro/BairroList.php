@@ -18,8 +18,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <h3>Listagem de Bairros</h3>
-                <!--http://localhost/php/site/admin/PostList.php-->
+            <h3><i class="fas fa-map-marker-alt me-1"></i>Listagem de Bairros</h3>
 
                 <form action="./BairroList.php" method="post">
 
@@ -27,7 +26,6 @@
                         <div class="col-md-2">
                             <select name="tipo" class="form-select">
                                 <option value="nome">Nome</option>
-                                <option value="categoria">Categoria</option>
                             </select>
                         </div>
 
@@ -39,7 +37,7 @@
                     <div class="row">
                         <div class="col mt-4">
                             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-                            <a href="./ExercicioForm.php" class="btn btn-secondary"><i class="fa-solid fa-plus"></i> Cadastrar</a>
+                            <a href="./BairroForm.php" class="btn btn-secondary"><i class="fa-solid fa-plus"></i> Cadastrar</a>
                         </div>
                     </div>
                 </form>
@@ -50,35 +48,26 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nome</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Equipamento</th>
-                        <th scope="col">Nível</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Ação</th>
-                        <th scope="col">Ação</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        $dbCategoria = new $db('categoria');
+                        $dbBairro = new $db('bairro');
                         foreach($dados as $item) {
-                            $categoria = $dbCategoria->find($item->categoria_id);
                             echo"
                             <tr>
                                 <th scope='row'>$item->id</th>
                                 <td>$item->nome</td>
-                                <td>$categoria->nome</td>
-                                <td>$item->equipamento</td>
-                                <td>$item->nivel</td> 
-                                <td>$item->descricao</td>
                                 <td>
-                                    <a class='btn btn-warning' href='./ExercicioForm.php?id=$item->id'><i class='fa-solid fa-pen-to-square'></i></a>
+                                    <a class='btn btn-warning' href='./BairroForm.php?id=$item->id'><i class='fa-solid fa-pen-to-square'></i></a>
                                 </td>
                                 <td>
                                     <a class='btn btn-danger'
                                         title='Excluir'
                                         onclick='return confirm(\"Deseja Excluir?\")'
-                                        href='./ExercicioList.php?id=$item->id'><i class='fa-solid fa-trash'></i>
+                                        href='./BairroList.php?id=$item->id'><i class='fa-solid fa-trash'></i>
                                     </a>
                                 </td>
                             </tr>
@@ -88,6 +77,13 @@
                 </tbody>
                 </table>
             </div>
-<?php
-    include_once "../../footer.php";
-?>
+
+
+   <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>
+

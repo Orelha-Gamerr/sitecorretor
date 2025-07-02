@@ -12,12 +12,8 @@ session_start();
     </style>
     <title>Leandro Lucietto Corretor</title>
     <link rel="shortcut icon" href="config/imagens/ico/android-chrome-192x192.png" type="image/x-icon">
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-    <!-- Font Awesome (CORRETO) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Leaflet JS -->
