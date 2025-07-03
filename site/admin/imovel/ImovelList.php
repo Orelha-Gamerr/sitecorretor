@@ -24,6 +24,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <select name="tipo" class="form-select">
+                            <option value="id">Id</option>
                             <option value="nome">Nome</option>
                             <option value="cliente">Cliente</option>
                             <option value="cidade">Cidade</option>
@@ -31,6 +32,7 @@
                             <option value="rua">Rua</option>
                             <option value="tipo">Tipo</option>
                             <option value="status">Status</option>
+                            <option value="cep">CEP</option>
                         </select>
                     </div>
 
@@ -59,6 +61,7 @@
                         <th>Cidade</th>
                         <th>Bairro</th>
                         <th>Rua</th>
+                        <th>CEP</th>
                         <th>Tipo</th>
                         <th>Status</th>
                         <th>Editar</th>
@@ -78,6 +81,7 @@
                                 <td>{$item->cidade}</td>
                                 <td>{$item->idBairro}</td>
                                 <td>{$item->rua}</td>
+                                <td>{$item->cep}</td>
                                 <td>{$item->tipo}</td>
                                 <td>{$item->status}</td>
                                 <td><a class='btn btn-warning' title='Editar' href='./ImovelForm.php?id={$item->id}'><i class='fa-solid fa-pen-to-square'></i></a></td>

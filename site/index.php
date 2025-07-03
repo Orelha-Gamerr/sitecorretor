@@ -20,7 +20,9 @@ session_start();
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
         #map {
-            height: 380px;
+            display: block;
+            position: static; 
+            height: 66vh;
             width: 100%;
         }
     </style>

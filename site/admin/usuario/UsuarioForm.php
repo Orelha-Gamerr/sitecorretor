@@ -135,7 +135,7 @@ if (!empty($_GET['id'])) {
                     <a href="./UsuarioList.php" class="btn btn-outline-secondary btn-lg px-4">
                         <i class="fas fa-arrow-left me-2"></i> Voltar
                     </a>
-                    <button type="submit" class="btn btn-success btn-lg px-4">
+                    <button type="submit" class="btn btn-outline-warning btn-lg px-4">
                         <i class="fas fa-save me-2"></i> Salvar
                     </button>
                 </div>
@@ -144,6 +144,10 @@ if (!empty($_GET['id'])) {
     </div>
 </div>
 
-<?php
-    include_once "../../footer.php";
-?>
+<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>

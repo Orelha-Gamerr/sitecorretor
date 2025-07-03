@@ -36,7 +36,7 @@ session_start();
     <div class="container py-5">
         <div class="card shadow-sm">
             <div class="card-header text-white py-3" style="background-color: rgb(233, 151, 0);">
-                <h2 class="mb-0"><i class="fas fa-tachometer-alt me-2"></i>Painel de Administração</h2>
+                <h2 class="mb-0"><i class="fas fa-tachometer-alt me-2"></i>Painel de Administração</h2> <a href="../index.php" class="btn btn-lg px-4 me-2"><i class="fas fa-arrow-left me-2"></i> Voltar</a>
             </div>
             
             <div class="card-body">
@@ -74,11 +74,11 @@ session_start();
                     <div class="col-md-4">
                         <div class="card dashboard-card h-100">
                             <div class="card-body text-center">
-                                <i class="fa-solid fa-house fa-3x text-warning mb-3"></i>
-                                <h5 class="card-title">Tela Inicial</h5>
-                                <p class="card-text">Visualizar a estrutura do site</p>
-                                <a href="../index.php" class="btn btn-warning btn-lg w-100">
-                                    <i class="fa-solid fa-arrow-right me-2"></i> Acessar
+                                <i class="fa-solid fa-image fa-3x text-warning mb-3"></i>
+                                <h5 class="card-title">Gerenciar Imagens</h5>
+                                <p class="card-text">Cadastre e edite os bairros disponíveis</p>
+                                <a href="./imagens/ImagemList.php" class="btn btn-warning btn-lg w-100">
+                                    <i class="fa-solid fa-list me-2"></i> Acessar
                                 </a>
                             </div>
                         </div>
@@ -88,8 +88,10 @@ session_start();
         </div>
     </div>
 
-    <?php include_once "../footer.php"; ?>
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    </main>
+</body>
 </html>

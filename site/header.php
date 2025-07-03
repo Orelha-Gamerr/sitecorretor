@@ -17,7 +17,7 @@ $base = "/sitecorretor/site/";
 </head>
 <body>
 
-<!-- Navbar moderna -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold text-dark"><i></i>Sistema de Imóveis</a>
@@ -40,6 +40,9 @@ $base = "/sitecorretor/site/";
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark" href="../bairro/BairroList.php"><i class="fas fa-map-marker-alt me-1"></i>Bairros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="../imagens/ImagemList.php"><i class="fa-solid fa-image"></i> Imagens</a>
         </li>
       </ul>
       <a href="../index.php?logout=true" class="btn btn-outline-dark"><i class="fas fa-sign-out-alt"></i> Sair</a>
